@@ -7,8 +7,8 @@ def lengthofNum(num):
     lenV=lenV+1  
     lengthofNum(num//10)
 
-num=153
-lengthofNum(num)
+
+
 value=0
 def armstrongValue(num, lenV):
     global value 
@@ -18,8 +18,9 @@ def armstrongValue(num, lenV):
 
     value=value+(num%10)**lenV
     armstrongValue(num//10, lenV)
-
-
+num=153
+lengthofNum(num)
+armstrongValue(num, lenV)
 if value==num:
     print(f'Yes this num : {num} is an armstrong number.')
 else:
